@@ -93,7 +93,11 @@ export default function Landing() {
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pb-20 pt-16 sm:pt-24">
-        <motion.div initial="initial" animate="animate" variants={fade as never}>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+        >
           <Badge variant="outline" className="font-data text-[11px] tracking-label">
             SMART INDIA HACKATHON · PROTOTYPE DIGITAL TWIN
           </Badge>
@@ -121,9 +125,9 @@ export default function Landing() {
 
         {/* Hero stats strip */}
         <motion.div
-          initial="initial"
-          animate="animate"
-          transition={{ delay: 0.15, duration: 0.55 }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.55, ease: "easeOut" }}
           className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-4"
         >
           {(
